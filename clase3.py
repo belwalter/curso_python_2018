@@ -80,11 +80,12 @@ print(calc(2, 5, 'g'))
 # print(funcion(2, 5))
 
 def criterio(item):
-    return item[1] + str(item[0])
+    return item[2]
 
 
 lista = [[31, 'bel', 'walter'],[21, 'gonzalez','juan'],
-         [55, 'alba','jose'],[55, 'alba','andres']]
+         [55, 'alba','jose'],[55, 'alba','andres
+
 lista.sort(key=criterio)
 for elemento in lista:
     print(elemento)
