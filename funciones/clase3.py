@@ -1,5 +1,3 @@
-
-
 # FUNCIONES
 def saludar():
     print("hola")
@@ -40,7 +38,7 @@ for i in range(0, 10):
     cargar_lista(lista)
 # print(lista)
 
-print(nueva_funcion(n3=1, n1=100))
+#print(nueva_funcion(n3=1, n1=100))
 parametros(4, 9, 90, 100, [1, 2, 3])
 
 def suma(n1, n2):
@@ -70,12 +68,12 @@ def calc(n1, n2, operador):
     else:
         return ''
 
-
+'''
 print(calc(2, 5, '+'))
 print(calc(2, 5, '-'))
 print(calc(2, 5, '*'))
 print(calc(2, 5, 'g'))
-
+'''
 # funcion = suma
 # print(funcion(2, 5))
 
@@ -84,8 +82,10 @@ def criterio(item):
 
 
 lista = [[31, 'bel', 'walter'],[21, 'gonzalez','juan'],
-         [55, 'alba','jose'],[55, 'alba','andres
+         [55, 'alba','jose'],[55, 'alba','andres']]
 
 lista.sort(key=criterio)
+'''
 for elemento in lista:
     print(elemento)
+'''

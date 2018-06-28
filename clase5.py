@@ -38,7 +38,7 @@ lista = [obj1, obj2, obj3]
 
 for elemento in lista:
     print(elemento.comer())
-    #if (isinstance(elemento, Perro)):
+    # if (isinstance(elemento, Perro)):
     #    print(elemento.comer2())
 
 """
