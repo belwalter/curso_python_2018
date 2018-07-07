@@ -12,6 +12,7 @@ class Menu_Muestra(QDialog):
         loadUi("interfaz/menu_muestra.ui", self)
         self.lista_muestras = []
         self.agregar.clicked.connect(self.abrir_menu_c)
+        self.actualizar_tabla()
 
     def abrir_menu_c(self):
         menu_c = cargar_muestra.Cargar_Muestra()
