@@ -79,7 +79,7 @@ class validarexception(Exception):
 
 def cargar(p):
     try:
-        if((p.ape==None) or (len(p.ape)==0)):
+        if((p.ape == None) or (len(p.ape)==0)):
             raise validarexception("apellido")
         if((p.nom==None) or (len(p.nom)==0)):
             raise validarexception("nombre")
