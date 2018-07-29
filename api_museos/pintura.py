@@ -9,3 +9,4 @@ class Pintura(muestra.Obra_Muestra):
         self.tipo = tipo
         self.material = material
         self.estilo = estilo
+        

@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="agregar">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>60</y>
+      <x>410</x>
+      <y>280</y>
       <width>97</width>
       <height>26</height>
      </rect>
@@ -26,6 +26,39 @@
     <property name="text">
      <string>Agregar</string>
     </property>
+   </widget>
+   <widget class="QPushButton" name="agregar_museo">
+    <property name="geometry">
+     <rect>
+      <x>366</x>
+      <y>50</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Agregar Museo</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tabla">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>Nombre</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Direccion</string>
+     </property>
+    </column>
    </widget>
   </widget>
  </widget>

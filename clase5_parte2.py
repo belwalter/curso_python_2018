@@ -93,7 +93,7 @@ def cargar(p):
         elif e.get_campo()==2:
             p.dni = int(input('ingrese dni '))
         cargar(p)
-        
+
 
 
 
