@@ -3,15 +3,17 @@ from PyQt5.uic import loadUi
 
 from errores import validarPinturaException
 import pintura
+from funciones_mongo import guardar_pintura
 
 
 class Cargar_Muestra(QDialog):
 
-    def __init__(self):
+    def __init__(self, museo):
         super().__init__()
         loadUi("interfaz/cargar_muestra.ui", self)
         self.combobox.currentIndexChanged.connect(self.habilitar)
         self.guardar.clicked.connect(self.cargar)
+        self.museo = museo
         self.muestra = None
 
     def cargar(self):
@@ -37,6 +39,7 @@ class Cargar_Muestra(QDialog):
                     raise validarPinturaException("tipo")
                 if((self.muestra.material ==None) or (len(self.muestra.material)==0)):
                     raise validarPinturaException("material")
+                guardar_pintura(self.museo, self.muestra)
                 self.hide()
             except validarPinturaException as e:
                 msg = QMessageBox()

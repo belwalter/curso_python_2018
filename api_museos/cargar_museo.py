@@ -3,6 +3,7 @@ from PyQt5.uic import loadUi
 
 
 import museo
+from funciones_mongo import guardar_museo
 
 
 class Cargar_Museo(QDialog):
@@ -17,4 +18,5 @@ class Cargar_Museo(QDialog):
         self.museo = museo.Museo()
         self.museo.nombre = self.nombre.text()
         self.museo.direccion = self.direccion.text()
+        guardar_museo(self.museo)
         self.hide()

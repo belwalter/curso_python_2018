@@ -1,6 +1,7 @@
 import sys
 import menu_muestra
 import cargar_museo
+from funciones_mongo import lista_museos
 
 from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import QMainWindow, QApplication, QTableWidgetItem
@@ -15,13 +16,15 @@ class Principal(QMainWindow):
         self.setGeometry(50, 50, self.frameGeometry().width(),
                          self.frameGeometry().height())
         self.show()
-        self.lista_museos = []
-        self.agregar.clicked.connect(self.abrir_menu_m)
+        self.lista_museos = lista_museos()
+        self.actualizar_tabla()
+        self.ver.clicked.connect(self.abrir_menu_m)
         self.agregar_museo.clicked.connect(self.agregar_museo_)
 
     def abrir_menu_m(self):
-        menu_m = menu_muestra.Menu_Muestra()
-        menu_m.exec_()
+        if(self.tabla.currentRow() >= 0):
+            menu_m = menu_muestra.Menu_Muestra(self.lista_museos[int(self.tabla.currentRow())])
+            menu_m.exec_()
 
     def agregar_museo_(self):
         menu_cargam = cargar_museo.Cargar_Museo()

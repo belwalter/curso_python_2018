@@ -14,17 +14,17 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="agregar">
+   <widget class="QPushButton" name="ver">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>280</y>
-      <width>97</width>
-      <height>26</height>
+      <x>370</x>
+      <y>100</y>
+      <width>121</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>Agregar</string>
+     <string>Ver Museo</string>
     </property>
    </widget>
    <widget class="QPushButton" name="agregar_museo">

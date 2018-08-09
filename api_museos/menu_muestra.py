@@ -7,24 +7,24 @@ import pintura
 
 class Menu_Muestra(QDialog):
 
-    def __init__(self):
+    def __init__(self, museo):
         super().__init__()
+        self.museo = museo
         loadUi("interfaz/menu_muestra.ui", self)
-        self.lista_muestras = []
         self.agregar.clicked.connect(self.abrir_menu_c)
         self.actualizar_tabla()
 
     def abrir_menu_c(self):
-        menu_c = cargar_muestra.Cargar_Muestra()
+        menu_c = cargar_muestra.Cargar_Muestra(self.museo)
         menu_c.exec_()
         muestra = menu_c.muestra
         if(muestra != None):
-            self.lista_muestras.append(muestra)
+            self.museo.muestras.append(muestra)
             self.actualizar_tabla()
 
     def actualizar_tabla(self):
         self.tabla.setRowCount(0)
-        for muestra in self.lista_muestras:
+        for muestra in self.museo.muestras:
             self.tabla.insertRow(self.tabla.rowCount())
             self.tabla.setItem(self.tabla.rowCount()-1, 0,
                                QTableWidgetItem(str(muestra.artista)))
