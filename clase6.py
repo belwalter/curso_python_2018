@@ -43,7 +43,7 @@ class mi_ventana(QMainWindow):
         msg.setWindowTitle("MessageBox demo")
         msg.setDetailedText("The details are as follows:")
         msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel |
-        QMessageBox.Retry)
+                                QMessageBox.Retry)
         msg.setIcon(QMessageBox.Critical)
         ret = msg.exec_()
         if(QMessageBox.Retry == ret):

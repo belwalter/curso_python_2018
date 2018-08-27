@@ -60,6 +60,19 @@
      </property>
     </column>
    </widget>
+   <widget class="QPushButton" name="mapa">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>160</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ver Mapa</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
