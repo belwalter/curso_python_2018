@@ -7,7 +7,6 @@ from funciones_mongo import lista_museos
 from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import QMainWindow, QApplication, QTableWidgetItem
 
-
 class Principal(QMainWindow):
 
     def __init__(self):
@@ -29,7 +28,7 @@ class Principal(QMainWindow):
             menu_m.exec_()
 
     def ver_mapa(self):
-        menu_mapa = visor_mapa.Mapa()
+        menu_mapa = visor_mapa.Mapa(self.lista_museos)
         menu_mapa.exec_()
 
     def agregar_museo_(self):

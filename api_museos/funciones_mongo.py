@@ -38,7 +38,7 @@ def lista_museos():
     documentos = db.get_collection('museos').find({})
     lista_museos = []
     for elemento in documentos:
-        m = museo.Museo(elemento['nombre'], elemento['direccion'])
+        m = museo.Museo(elemento['nombre'], elemento['direccion'], elemento['tipo'])
         lista_muestras(m)
         lista_museos.append(m)
     return lista_museos

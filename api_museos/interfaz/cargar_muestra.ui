@@ -201,15 +201,15 @@
     <rect>
      <x>170</x>
      <y>100</y>
-     <width>110</width>
+     <width>191</width>
      <height>27</height>
     </rect>
    </property>
    <property name="currentSection">
-    <enum>QDateTimeEdit::DaySection</enum>
+    <enum>QDateTimeEdit::YearSection</enum>
    </property>
    <property name="displayFormat">
-    <string>dd/MM/yyyy</string>
+    <string>yyyy</string>
    </property>
    <property name="date">
     <date>

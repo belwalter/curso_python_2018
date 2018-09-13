@@ -5,6 +5,8 @@ from errores import validarPinturaException
 import pintura
 from funciones_mongo import guardar_pintura
 
+from datetime import date
+
 
 class Cargar_Muestra(QDialog):
 
@@ -15,6 +17,7 @@ class Cargar_Muestra(QDialog):
         self.guardar.clicked.connect(self.cargar)
         self.museo = museo
         self.muestra = None
+        self.anio.setDate(date.today())
 
     def cargar(self):
         if(self.combobox.currentIndex() == 0):
