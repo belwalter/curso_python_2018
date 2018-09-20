@@ -3,16 +3,25 @@ from PyQt5.uic import loadUi
 
 import cargar_muestra
 import pintura
+import prestamo
 
 
 class Menu_Muestra(QDialog):
 
-    def __init__(self, museo):
+    def __init__(self, museo, museos):
         super().__init__()
         self.museo = museo
+        self.museos = museos
         loadUi("interfaz/menu_muestra.ui", self)
         self.agregar.clicked.connect(self.abrir_menu_c)
+        self.prestar.clicked.connect(self.menu_prestar)
         self.actualizar_tabla()
+
+    def menu_prestar(self):
+        if(self.tabla.currentRow() >= 0):
+            muestra = self.museo.muestras[int(self.tabla.currentRow())]
+            menu_p = prestamo.Prestamo_Obra(muestra, self.museo, self.museos)
+            menu_p.exec_()
 
     def abrir_menu_c(self):
         menu_c = cargar_muestra.Cargar_Muestra(self.museo)

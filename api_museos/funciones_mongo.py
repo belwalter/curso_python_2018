@@ -29,6 +29,7 @@ def lista_muestras(museo):
             m = pintura.Pintura()
             m.artista = muestra['artista']
             m.anio = muestra['anio']
+            m.museo = museo
             # falta completar
             museo.muestras.append(m)
 

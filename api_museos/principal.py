@@ -7,6 +7,7 @@ from funciones_mongo import lista_museos
 from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import QMainWindow, QApplication, QTableWidgetItem
 
+
 class Principal(QMainWindow):
 
     def __init__(self):
@@ -24,7 +25,8 @@ class Principal(QMainWindow):
 
     def abrir_menu_m(self):
         if(self.tabla.currentRow() >= 0):
-            menu_m = menu_muestra.Menu_Muestra(self.lista_museos[int(self.tabla.currentRow())])
+            menu_m = menu_muestra.Menu_Muestra(self.lista_museos[int(self.tabla.currentRow())],
+                                                self.lista_museos)
             menu_m.exec_()
 
     def ver_mapa(self):

@@ -56,6 +56,19 @@
     <string>Agregar Muestra</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="prestar">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>120</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Prestar Muestra</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

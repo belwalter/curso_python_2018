@@ -5,6 +5,9 @@ import abc
 
 class Obra_Muestra(metaclass=abc.ABCMeta):
 
+    def get_museo():
+        return self.museo
+
     def get_artista(self):
         return self.artista
 
@@ -18,11 +21,12 @@ class Obra_Muestra(metaclass=abc.ABCMeta):
         return self.descripcion
 
     @abc.abstractmethod
-    def __init__(self, artista=None, anio=None, titulo=None, descripcion=None):
+    def __init__(self, artista=None, anio=None, titulo=None, descripcion=None, museo=None) :
         self.artista = artista
         self.anio = anio
         self.titulo = titulo
         self.descripcion = descripcion
+        self.museo = museo
 
 
 # a = Obra_Muestra()
