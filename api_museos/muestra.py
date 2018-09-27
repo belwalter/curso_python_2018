@@ -21,7 +21,8 @@ class Obra_Muestra(metaclass=abc.ABCMeta):
         return self.descripcion
 
     @abc.abstractmethod
-    def __init__(self, artista=None, anio=None, titulo=None, descripcion=None, museo=None) :
+    def __init__(self, artista=None, anio=None, titulo=None, descripcion=None,
+                 museo=None):
         self.artista = artista
         self.anio = anio
         self.titulo = titulo

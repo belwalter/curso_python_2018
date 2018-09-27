@@ -9,7 +9,7 @@ class Prestamo_Obra(QDialog):
     def __init__(self, muestra, museo, museos):
         super().__init__()
         loadUi("interfaz/prestar.ui", self)
-        #self.combobox.currentIndexChanged.connect(self.habilitar)
+        # self.combobox.currentIndexChanged.connect(self.habilitar)
         self.prestar.clicked.connect(self.prestar_muestra)
         self.lista_museos = museos
         self.museo = museo
@@ -33,7 +33,7 @@ class Prestamo_Obra(QDialog):
         cadena = str(hasta.date() - desde.date())
         cantidad = cadena[0:cadena.find('d')]
         museo_destino = self.destino.currentText()
-        msg.setText("Debe Prestar la Muestra por "+str(cantidad)+"días?"+
+        msg.setText("Debe Prestar la Muestra por "+str(cantidad)+"días?" +
                     " a "+museo_destino)
         respuesta = msg.exec()
         if (respuesta == QMessageBox.Ok):
