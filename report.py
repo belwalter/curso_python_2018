@@ -19,15 +19,13 @@ def export_to_pdf(data):
     w, h = A4
     c.drawString(475, 780, time.strftime("%d/%m/%y"))
 
-    #c.showPage()
+    # c.showPage()
     max_rows_per_page = 45
     # Margin.
     x_offset = 75
     y_offset = 100
     # Space between rows.
     padding = 15
-
-
     xlist = [x + x_offset for x in [0, 200, 250, 300, 350, 400, 480]]
     ylist = [h - y_offset - i*padding for i in range(max_rows_per_page + 1)]
     cont_pag = 0
@@ -35,9 +33,9 @@ def export_to_pdf(data):
         cont_pag += 1
         c.drawImage("logo.jpg", 5, 750, width=300, height=75)
         rows = tuple(filter(bool, rows))
-        #c.grid(xlist, ylist[:len(rows) + 1])
+        # c.grid(xlist, ylist[:len(rows) + 1])
         for y, row in zip(ylist[:-1], rows):
-            #c.setFillColorRGB(0, 0, 1)
+            # c.setFillColorRGB(0, 0, 1)
             for x, cell in zip(xlist, row):
                 c.drawString(x + 2, y - padding + 3, str(cell))
             c.line(30, 40, 550, 40)
